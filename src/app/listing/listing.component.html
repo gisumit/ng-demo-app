@@ -1,3 +1,22 @@
-<p>
-  listing works!
-</p>
+<div *ngIf="prop">
+  <a [routerLink]="['/listings']">back to Property</a>
+  <br>
+  <div class="page-header">{{prop.title}} <span>{{prop.city}}</span></div>
+  <div class="row">
+    <div class="col-md-4">
+      <img style="width:100%" class="thumbnail" src="{{propImg}}" alt="{{}}">
+    </div>
+    <div class="col-md-8">
+      <ul class="list-group">
+        <li class="list-group-item">Owner: {{prop.owner}}</li>
+        <li class="list-group-item">Bedrooms: {{prop.bedrooms}}</li>
+        <li class="list-group-item">Type: {{prop.type}}</li>
+        <li class="list-group-item">Price: {{prop.price}}</li>
+      </ul>
+    </div>
+    <div class="col-md-8">
+      <a class="btn btn-default">Edit</a>
+      <a class="btn btn-danger">Delete</a>
+    </div>
+  </div>
+</div>
