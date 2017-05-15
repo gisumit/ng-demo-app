@@ -37,4 +37,10 @@ export class ListingComponent implements OnInit {
     })
   }
 
+  onDelete() {
+    this.Fs.deleteProp(this.id);
+
+    this.router.navigate(['/listings/']);
+  }
+
 }

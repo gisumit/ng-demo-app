@@ -15,8 +15,8 @@
       </ul>
     </div>
     <div class="col-md-8">
-      <a class="btn btn-default">Edit</a>
-      <a class="btn btn-danger">Delete</a>
+      <a class="btn btn-default" [routerLink]="['/edit-prop/'+prop.$key]" >Edit</a>
+      <a (click)="onDelete()" class="btn btn-danger">Delete</a>
     </div>
   </div>
 </div>
